@@ -1,12 +1,10 @@
 <template>
-  <div id="app">
-    
-  </div>  
+  <h2>分类</h2>  
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Category'
 }
 </script>
 
