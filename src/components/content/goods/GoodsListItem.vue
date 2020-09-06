@@ -1,13 +1,11 @@
 <template>
-  <div class="goods-item">
-    <a :href="goodsItem.link">
-      <img :src="goodsItem.showLarge.img" alt="">
+  <div class="goods-item" @click="itemClick">
+      <img :src="goodsItem.showLarge.img" alt="" @load="imageload">
       <div class="goods-info">
         <p>{{goodsItem.title}}</p>
         <span class="price">{{goodsItem.price}}</span>
         <span class="collect">{{goodsItem.cfav}}</span>
       </div>
-    </a>
   </div>
 </template>
 
@@ -20,6 +18,14 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  methods: {
+    imageload() {
+      this.$bus.$emit('itemImageLoad')
+    },
+    itemClick() {
+      this.$router.push('/detail/ ' + this.goodsItem.iid)
     }
   }
 }
