@@ -42,11 +42,13 @@
         // 鼠标点击事件
       })
 
+      // 监听滚动事件
       this.scroll.on('scroll', position => {
         // console.log(position)
         this.$emit('scroll', position)
       })
 
+      // 监听上拉加载更多
       if(this.pullUpLoad) {
         this.scroll.on('pullingUp', () => {
         // console.log('上拉加载更多')

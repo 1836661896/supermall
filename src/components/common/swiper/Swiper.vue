@@ -50,7 +50,15 @@
 
         // 2.开启定时器
         this.startTimer();
-      }, 100)
+      }, 500)
+//       this.$nextTick(() => {
+//         this.handleDom();
+
+//         // 2.开启定时器
+//         this.startTimer();
+
+//         console.log('aaa')
+//       })
     },
     methods: {
 		  /**
@@ -204,9 +212,20 @@
 
         // 3.添加定时器
         this.startTimer();
+      },
+      init() {
+        // 1.操作DOM, 在前后添加Slide
+      
+          this.handleDom();
+
+          // 2.开启定时器
+          this.startTimer();
+
+          console.log('aaa')
+        
       }
     }
-	}
+  }
 </script>
 
 <style scoped>

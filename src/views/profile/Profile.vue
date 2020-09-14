@@ -1,5 +1,7 @@
 <template>
-  <h2>我的</h2>
+  <div>
+
+  </div>
 </template>
 
 <script>

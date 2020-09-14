@@ -1,5 +1,5 @@
 <template>
-  <div id="detailNavBar">
+  <div id="DetailNavBar">
     <nav-bar>
       <div slot="left" class="back" @click="back">
         <img src="~assets/img/common/back.svg" alt="">
@@ -22,7 +22,7 @@
 
 
   export default {
-    name: 'detailNavBar',
+    name: 'DetailNavBar',
     components: {
       NavBar
     },
@@ -33,17 +33,22 @@
       }
     },
     methods: {
-      titleClick(index) {
-        this.currentIndex = index
-      },
       back() {
         this.$router.back()
+      },
+      titleClick(index) {
+        this.currentIndex = index
+        this.$emit('titleClick', index)
       }
     }
   }
 </script>
 
 <style scoped>
+
+  #DetailNavBar {
+    background: #fff;
+  }
 
   .title {
     display: flex;
